@@ -1,7 +1,7 @@
 %define name    tellico
 %define pre   %nil
 %define version 1.2.8
-%define release %mkrel 1
+%define release %mkrel 2
 %define iconname %{name}.png
 
 
