@@ -2,7 +2,7 @@
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	1.2.12
+Version:	1.2.13
 Release:	%mkrel 1
 Epoch:		1
 License:	GPL
