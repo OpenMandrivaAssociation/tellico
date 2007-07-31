@@ -9,7 +9,6 @@ License:	GPL
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
 Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.tar.bz2
-Patch1:		%{name}-1.2.12-yaz.patch
 Requires:	kdebase
 Requires:	kdemultimedia-kscd
 Requires(post):	desktop-file-utils
@@ -54,7 +53,6 @@ o Imports and exports to Alexandria libraries
 
 %prep
 %setup -q
-%patch1 -p1 
 
 %build 
 
