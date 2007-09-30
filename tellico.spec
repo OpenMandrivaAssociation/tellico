@@ -67,7 +67,6 @@ o Imports and exports to Alexandria libraries
 	--enable-libsuffix="%(A=%{_lib}; echo ${A/lib/})" \
 	%endif
 	--enable-nmcheck
-	
 
 %make
 
@@ -103,5 +102,6 @@ rm -rf %{buildroot}
 %{_datadir}/apps/kconf_update/tellico-rename.upd
 %{_datadir}/apps/kconf_update/tellico.upd
 %{_datadir}/config.kcfg/tellico_config.kcfg
+%{_datadir}/config/tellicorc
 %{_iconsdir}/hicolor/*/apps/*.png
 %{_iconsdir}/hicolor/*/mimetypes/*.png
