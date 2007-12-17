@@ -25,7 +25,6 @@ BuildRequires:	yaz-devel >= 3.0
 BuildRequires:	tcp_wrappers-devel 
 Obsoletes:	bookcase
 Provides:	bookcase
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Tellico is a KDE application for keeping track of your book collection.
