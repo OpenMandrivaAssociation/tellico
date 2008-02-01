@@ -2,13 +2,13 @@
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	1.2.14
+Version:	1.3
 Release:	%mkrel 1
 Epoch:		1
-License:	GPL
+License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
-Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.tar.bz2
+Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.tar.gz
 Requires:	kdebase
 Requires:	kdemultimedia-kscd
 Requires(post):	desktop-file-utils
@@ -18,7 +18,7 @@ BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
 BuildRequires:	chrpath
 BuildRequires:	taglib-devel
-BuildRequires:	libkdemultimedia-common-devel
+BuildRequires:	kdemultimedia-devel
 BuildRequires:	kdepim-devel
 BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
@@ -63,9 +63,6 @@ o Imports and exports to Alexandria libraries
 	--enable-pch \
 	--enable-new-ldflags \
 	--enable-final \
-	%if "%{_lib}" != "lib"
-	--enable-libsuffix="%(A=%{_lib}; echo ${A/lib/})" \
-	%endif
 	--enable-nmcheck
 
 %make
@@ -76,17 +73,19 @@ rm -rf %{buildroot}
 %makeinstall_std
 chrpath -d %{buildroot}%{_bindir}/*
 
-%find_lang %{name}
+%find_lang %{name} --with-html
 
 %post
 %{update_menus}
 %{update_desktop_database}
 %update_icon_cache hicolor
+%update_mime_database
 
 %postun
 %{clean_menus}
 %{clean_desktop_database}
 %clean_icon_cache hicolor
+%clean_mime_database
 
 %clean 
 rm -rf %{buildroot}
@@ -94,13 +93,12 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr (-,root,root)
 %doc AUTHORS COPYING ChangeLog INSTALL TODO
-%doc %dir %{_datadir}/doc/HTML/*/tellico/*
 %{_bindir}/%{name}
 %{_datadir}/applications/kde/tellico.desktop
-%{_datadir}/mimelnk/application/x-tellico.desktop 
-%{_datadir}/apps/%{name}/
-%{_datadir}/apps/kconf_update/tellico-rename.upd
-%{_datadir}/apps/kconf_update/tellico.upd
+%{_datadir}/mimelnk/application/x-tellico.desktop
+%{_datadir}/mime/packages/tellico.xml
+%{_datadir}/apps/%{name}
+%{_datadir}/apps/kconf_update/*
 %{_datadir}/config.kcfg/tellico_config.kcfg
 %{_datadir}/config/tellicorc
 %{_iconsdir}/hicolor/*/apps/*.png
