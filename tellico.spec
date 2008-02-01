@@ -17,6 +17,7 @@ BuildRequires:	kdelibs-devel
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
 BuildRequires:	icu-devel
+BuildRequires:	libpoppler-qt-devel
 BuildRequires:	chrpath
 BuildRequires:	taglib-devel
 BuildRequires:	kdemultimedia-devel
