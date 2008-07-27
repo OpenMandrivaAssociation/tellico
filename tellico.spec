@@ -2,7 +2,7 @@
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	1.3.2.1
+Version:	1.3.3
 Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2+
@@ -17,10 +17,9 @@ BuildRequires:	kdelibs-devel
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
 BuildRequires:	icu-devel
-BuildRequires:	libpoppler-qt-devel
 BuildRequires:	chrpath
 BuildRequires:	taglib-devel
-BuildRequires:	kdemultimedia-devel
+BuildRequires:	kdemultimedia3-devel
 BuildRequires:	kdepim-devel
 BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
@@ -57,23 +56,13 @@ o Imports and exports to Alexandria libraries
 %setup -q
 
 %build 
-
-%configure2_5x \
-	--disable-debug \
-	--disable-rpath \
-	--with-xinerama \
-	--enable-pch \
-	--enable-new-ldflags \
-	--enable-final \
-	--enable-nmcheck
-
+%configure_kde3
 %make
 
 %install
 rm -rf %{buildroot}
 
 %makeinstall_std
-chrpath -d %{buildroot}%{_bindir}/*
 
 %find_lang %{name} --with-html
 
@@ -99,13 +88,12 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr (-,root,root)
 %doc AUTHORS COPYING ChangeLog INSTALL TODO
-%{_bindir}/%{name}
-%{_datadir}/applications/kde/tellico.desktop
-%{_datadir}/mimelnk/application/x-tellico.desktop
-%{_datadir}/mime/packages/tellico.xml
-%{_datadir}/apps/%{name}
-%{_datadir}/apps/kconf_update/*
-%{_datadir}/config.kcfg/tellico_config.kcfg
-%{_datadir}/config/tellicorc
-%{_iconsdir}/hicolor/*/apps/*.png
-%{_iconsdir}/hicolor/*/mimetypes/*.png
+%{_kde3_bindir}/%{name}
+%{_kde3_datadir}/applications/kde/tellico.desktop
+%{_kde3_datadir}/mimelnk/application/x-tellico.desktop
+%{_kde3_datadir}/mime/packages/tellico.xml
+%{_kde3_datadir}/apps/%{name}
+%{_kde3_datadir}/apps/kconf_update/*
+%{_kde3_datadir}/config.kcfg/tellico_config.kcfg
+%{_kde3_datadir}/config/tellicorc
+%{_kde3_iconsdir}/hicolor/*/*/*.png
