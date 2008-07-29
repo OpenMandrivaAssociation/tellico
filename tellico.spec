@@ -3,7 +3,7 @@
 Summary:	A book collection manager
 Name:		tellico
 Version:	1.3.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 Epoch:		1
 License:	GPLv2+
 Group:		Databases
