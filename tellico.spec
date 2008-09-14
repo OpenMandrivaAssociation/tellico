@@ -101,3 +101,4 @@ rm -rf %{buildroot}
 %{_kde3_datadir}/config.kcfg/tellico_config.kcfg
 %{_kde3_datadir}/config/tellicorc
 %{_kde3_iconsdir}/hicolor/*/*/*.png
+%{_kde3_iconsdir}/hicolor/*/*/*/*.png
