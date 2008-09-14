@@ -9,6 +9,8 @@ License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
 Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.tar.gz
+Source1:	admin.tar.bz2
+Patch0:		tellico-1.3-releaseflaws.patch
 Requires:	kdebase
 Requires:	kdemultimedia-kscd
 Requires(post):	desktop-file-utils
@@ -53,10 +55,12 @@ o Scans and imports audio file collections, such as mp3 or ogg
 o Imports and exports to Alexandria libraries
 
 %prep
-%setup -q
+%setup -q -a1
+%patch0 -p0
 
-%build 
-%configure_kde3
+%build
+make -f admin/Makefile.common
+%configure_kde3 --disable-final
 %make
 
 %install
