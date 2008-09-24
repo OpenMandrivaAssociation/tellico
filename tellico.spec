@@ -3,7 +3,7 @@
 Summary:	A book collection manager
 Name:		tellico
 Version:	1.3.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 Epoch:		1
 License:	GPLv2+
 Group:		Databases
@@ -22,6 +22,7 @@ BuildRequires:	icu-devel
 BuildRequires:	chrpath
 BuildRequires:	taglib-devel
 BuildRequires:	kdemultimedia3-devel
+BuildRequires:	libpoppler-qt-devel
 BuildRequires:	kdepim-devel
 BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
