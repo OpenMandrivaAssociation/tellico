@@ -12,7 +12,6 @@ Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.tar.gz
 Source1:	admin.tar.bz2
 Patch0:		tellico-1.3-releaseflaws.patch
 Requires:	kdebase
-Requires:	kdemultimedia-kscd
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	kdelibs-devel 
@@ -21,9 +20,7 @@ BuildRequires:	imagemagick
 BuildRequires:	icu-devel
 BuildRequires:	chrpath
 BuildRequires:	taglib-devel
-BuildRequires:	kdemultimedia3-devel
 BuildRequires:	libpoppler-qt-devel
-BuildRequires:	kdepim-devel
 BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:	tcp_wrappers-devel 
