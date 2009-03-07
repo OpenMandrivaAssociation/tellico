@@ -3,7 +3,7 @@
 Summary:	A book collection manager
 Name:		tellico
 Version:	1.9
-Release:	%mkrel 0.%svn.2
+Release:	%mkrel 0.%svn.3
 Epoch:		1
 License:	GPLv2+
 Group:		Databases
@@ -23,6 +23,7 @@ BuildRequires:	libpoppler-qt4-devel
 BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:	tcp_wrappers-devel 
+BuildRequires:  qimageblitz-devel
 Obsoletes:	bookcase
 Provides:	bookcase
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
