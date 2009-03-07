@@ -1,26 +1,25 @@
 %define iconname %{name}.png
-
+%define svn 936109
 Summary:	A book collection manager
 Name:		tellico
-Version:	1.3.4
-Release:	%mkrel 2
+Version:	1.9
+Release:	%mkrel 0.%svn.1
 Epoch:		1
 License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
-Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.tar.gz
-Source1:	admin.tar.bz2
-Patch0:		tellico-1.3-releaseflaws.patch
+Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.%svn.tar.bz2
+Patch0:		tellico-1.9-fix-format.patch
 Requires:	kdebase
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
-BuildRequires:	kdelibs-devel 
+BuildRequires:	kdelibs4-devel 
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
 BuildRequires:	icu-devel
 BuildRequires:	chrpath
 BuildRequires:	taglib-devel
-BuildRequires:	libpoppler-qt-devel
+BuildRequires:	libpoppler-qt4-devel
 BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:	tcp_wrappers-devel 
@@ -52,51 +51,35 @@ o Imports CDDB data
 o Scans and imports audio file collections, such as mp3 or ogg
 o Imports and exports to Alexandria libraries
 
+%files -f %{name}.lang
+%defattr (-,root,root)
+#%doc AUTHORS COPYING ChangeLog INSTALL TODO
+%{_kde_bindir}/%{name}
+%{_kde_datadir}/applications/kde4/tellico.desktop
+%{_kde_datadir}/mimelnk/application/x-tellico.desktop
+%{_kde_datadir}/mime/packages/tellico.xml
+%{_kde_datadir}/apps/%{name}
+%{_kde_datadir}/apps/kconf_update/*
+%{_kde_datadir}/config.kcfg/tellico_config.kcfg
+%{_kde_datadir}/config/*
+%{_kde_iconsdir}/hicolor/*/*/*.png
+
+#--------------------------------------------------------------------
+
 %prep
-%setup -q -a1
+%setup -q -n %name
 %patch0 -p0
 
 %build
-make -f admin/Makefile.common
-%configure_kde3 --disable-final
+%cmake_kde4
 %make
 
 %install
 rm -rf %{buildroot}
 
-%makeinstall_std
+%makeinstall_std -C build
 
 %find_lang %{name} --with-html
 
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%{update_desktop_database}
-%update_icon_cache hicolor
-%update_mime_database
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%{clean_desktop_database}
-%clean_icon_cache hicolor
-%clean_mime_database
-%endif
-
 %clean 
 rm -rf %{buildroot}
-
-%files -f %{name}.lang
-%defattr (-,root,root)
-%doc AUTHORS COPYING ChangeLog INSTALL TODO
-%{_kde3_bindir}/%{name}
-%{_kde3_datadir}/applications/kde/tellico.desktop
-%{_kde3_datadir}/mimelnk/application/x-tellico.desktop
-%{_kde3_datadir}/mime/packages/tellico.xml
-%{_kde3_datadir}/apps/%{name}
-%{_kde3_datadir}/apps/kconf_update/*
-%{_kde3_datadir}/config.kcfg/tellico_config.kcfg
-%{_kde3_datadir}/config/tellicorc
-%{_kde3_iconsdir}/hicolor/*/*/*.png
-%{_kde3_iconsdir}/hicolor/*/*/*/*.png
