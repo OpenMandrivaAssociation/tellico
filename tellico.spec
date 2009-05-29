@@ -10,7 +10,6 @@ License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
 Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.%svn.tar.bz2
-Patch0:		tellico-1.9-fix-format.patch
 Requires:	kdebase4-runtime
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
@@ -70,7 +69,6 @@ o Imports and exports to Alexandria libraries
 
 %prep
 %setup -q -n %name
-%patch0 -p0
 
 %build
 %cmake_kde4
