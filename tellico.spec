@@ -1,9 +1,10 @@
 %define iconname %{name}.png
-%define svn 936109
+%define svn 974359
+
 Summary:	A book collection manager
 Name:		tellico
 Version:	1.9
-Release:	%mkrel 0.%svn.4
+Release:	%mkrel 0.%svn.1
 Epoch:		1
 License:	GPLv2+
 Group:		Databases
