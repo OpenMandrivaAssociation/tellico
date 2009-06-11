@@ -1,5 +1,5 @@
 %define iconname %{name}.png
-%define svn 974359
+%define svn 980523
 
 Summary:	A book collection manager
 Name:		tellico
