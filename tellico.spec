@@ -3,13 +3,13 @@
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	1.9
-Release:	%mkrel 0.%svn.2
+Version:	2.0pre1
+Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
-Source:		http://www.periapsis.org/tellico/download/%{name}-%{version}.%svn.tar.bz2
+Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
 Requires:	kdebase4-runtime
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
@@ -68,7 +68,7 @@ o Imports and exports to Alexandria libraries
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %name
+%setup -q
 
 %build
 %cmake_kde4
