@@ -1,29 +1,29 @@
 %define iconname %{name}.png
-%define svn 989364
+
+%define prever pre1
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	2.0pre1
-Release:	%mkrel 1
-Epoch:		1
+Version:	2.0
+Release:	%mkrel -c %prever 1
+Epoch:		2
 License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
-Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
-Requires:	kdebase4-runtime
-Requires(post):	desktop-file-utils
-Requires(postun): desktop-file-utils
-BuildRequires:	kdelibs4-devel 
+Source:		http://www.tellico-project.org/files/%{name}-%{version}%{prever}.tar.bz2
+BuildRequires:	kdelibs4-devel
+BuildRequires:	kdemultimedia4-devel
+BuildRequires:	kdegraphics4-devel
+# Integration with the desktop address book and calendar for loans doesn't work
+#BuildRequires:	kdepimlibs4-devel
+BuildRequires:	exempi-devel
 BuildRequires:	libxslt-devel >= 1.0.19
-BuildRequires:	imagemagick
-BuildRequires:	icu-devel
-BuildRequires:	chrpath
-BuildRequires:	taglib-devel
 BuildRequires:	libpoppler-qt4-devel
-BuildRequires:	libcdda-devel
+BuildRequires:	imagemagick
+BuildRequires:	taglib-devel
 BuildRequires:	yaz-devel >= 3.0
-BuildRequires:	tcp_wrappers-devel 
 BuildRequires:  qimageblitz-devel
+BuildRequires:	qca2-devel
 Obsoletes:	bookcase
 Provides:	bookcase
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
@@ -54,10 +54,8 @@ o Imports and exports to Alexandria libraries
 
 %files -f %{name}.lang
 %defattr (-,root,root)
-#%doc AUTHORS COPYING ChangeLog INSTALL TODO
 %{_kde_bindir}/%{name}
 %{_kde_datadir}/applications/kde4/tellico.desktop
-%{_kde_datadir}/mimelnk/application/x-tellico.desktop
 %{_kde_datadir}/mime/packages/tellico.xml
 %{_kde_datadir}/apps/%{name}
 %{_kde_datadir}/apps/kconf_update/*
@@ -68,7 +66,7 @@ o Imports and exports to Alexandria libraries
 #--------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}%{prever}
 
 %build
 %cmake_kde4
@@ -78,6 +76,9 @@ o Imports and exports to Alexandria libraries
 rm -rf %{buildroot}
 
 %makeinstall_std -C build
+
+# we don't need kde3 stuff any more
+rm -f %{buildroot}%{_kde_datadir}/mimelnk/application/x-tellico.desktop
 
 %find_lang %{name} --with-html
 
