@@ -2,8 +2,8 @@
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	2.0
-Release:	%mkrel -c pre2 1
+Version:	2.0pre2
+Release:	%mkrel 1
 Epoch:		2
 License:	GPLv2+
 Group:		Databases
