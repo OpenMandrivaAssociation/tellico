@@ -2,9 +2,9 @@
 
 Summary:	A book collection manager
 Name:		tellico
-Version:	2.0pre2
+Version:	2.0
 Release:	%mkrel 1
-Epoch:		2
+Epoch:		3
 License:	GPLv2+
 Group:		Databases
 URL:		http://www.periapsis.org/tellico
@@ -53,7 +53,7 @@ o Imports and exports to Alexandria libraries
 
 %files -f %{name}.lang
 %defattr (-,root,root)
-#%doc AUTHORS COPYING ChangeLog INSTALL TODO
+%doc AUTHORS ChangeLog
 %{_kde_bindir}/%{name}
 %{_kde_datadir}/applications/kde4/tellico.desktop
 %{_kde_datadir}/mimelnk/application/x-tellico.desktop
