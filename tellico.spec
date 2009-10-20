@@ -3,7 +3,7 @@
 Summary:	A book collection manager
 Name:		tellico
 Version:	2.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -12,16 +12,16 @@ Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
 Requires:	kdebase4-runtime
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
-BuildRequires:	kdelibs4-devel 
+BuildRequires:	kdepimlibs4-devel
+BuildRequires:	kdegraphics4-devel
+BuildRequires:	kdemultimedia4-devel
+BuildRequires:	libv4l-devel
+BuildRequires:	exempi-devel
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
-BuildRequires:	icu-devel
-BuildRequires:	chrpath
 BuildRequires:	taglib-devel
 BuildRequires:	libpoppler-qt4-devel
-BuildRequires:	libcdda-devel
 BuildRequires:	yaz-devel >= 3.0
-BuildRequires:	tcp_wrappers-devel 
 BuildRequires:  qimageblitz-devel
 Obsoletes:	bookcase
 Provides:	bookcase
