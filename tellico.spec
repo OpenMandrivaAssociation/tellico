@@ -1,9 +1,9 @@
 %define iconname %{name}.png
 
-Summary:	A book collection manager
+Summary:	A collection manager
 Name:		tellico
-Version:	2.0
-Release:	%mkrel 2
+Version:	2.1
+Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -28,28 +28,14 @@ Provides:	bookcase
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
-Tellico is a KDE application for keeping track of your book collection.
-
-Features:
-
-o Supports collections of books, bibliographic entries, videos, or music. 
-o Supports any number of user-defined fields, of eight different types:
-   o text, paragraph, list, checkbox, year, URL
-   o tables of one or two columns.
-o Handles books with multiple authors, genres, keywords, etc.
-o Automatically formats titles and names
-o Supports collection searching and view filtering
-o Sorts and groups collection by various properties
-o Automatically validates ISBN
-o Allows customizable output through XSLT
-o Imports Bibtex, Bibtexml, and CSV
-o Exports to Bibtex, Bibtexml, CSV, and HTML
-o Includes translations for more than nine languages, other than English
-o Imports information directly from Amazon.com
-   (US, Japan, Germany, and United Kingdom)
-o Imports CDDB data
-o Scans and imports audio file collections, such as mp3 or ogg
-o Imports and exports to Alexandria libraries
+Tellico is a collection manager for KDE. It includes default collections for
+books, bibliographies, comic books, videos, music, coins, stamps, trading
+cards, and wines, and also allows custom collections. Unlimited user-defined
+fields are allowed. Filters are available to limit the visible entries by
+definable criteria. Full customization for printing is possible through
+editing the default XSLT file. It can import CSV, Bibtex, and Bibtexml and
+export CSV, HTML, Bibtex, Bibtexml, and PilotDB. Entries may be imported
+directly from different web services such as amazon.com.
 
 %files -f %{name}.lang
 %defattr (-,root,root)
