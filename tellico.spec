@@ -2,7 +2,7 @@
 
 Summary:	A collection manager
 Name:		tellico
-Version:	2.1.1
+Version:	2.2
 Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
