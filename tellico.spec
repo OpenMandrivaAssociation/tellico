@@ -7,7 +7,7 @@ Release:	%mkrel 2
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
-URL:		http://www.periapsis.org/tellico
+URL:		http://tellico-project.org/
 Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
 Requires:	kdebase4-runtime
 Requires(post):	desktop-file-utils
