@@ -2,7 +2,7 @@
 
 Summary:	A collection manager
 Name:		tellico
-Version:	2.2
+Version:	2.3
 Release:	%mkrel 2
 Epoch:		3
 License:	GPLv2+
@@ -10,12 +10,25 @@ Group:		Databases
 URL:		http://tellico-project.org/
 Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
 Requires:	kdebase4-runtime
+Requires:	kdelibs4-core
+Requires:	kdemultimedia4
+Requires:	kdepimlibs4-core
+Requires:	libexempi3
+Requires:	libxslt1
+Requires:	libtaglib1
+Requires:	libpoppler-qt4-3
+Requires:	yaz
+Requires:	libqimageblitz4
+Requires:	libksane0
+Requires:	libxml2_2
+# QJSON not available yet
+BuildRequires:	libpoppler-qt4-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	kdepimlibs4-devel
-BuildRequires:	kdegraphics4-devel
 BuildRequires:	kdemultimedia4-devel
-BuildRequires:	libv4l-devel
+BuildRequires:	kdelibs4-devel
+BuildRequires:	kdegraphics4-devel
 BuildRequires:	exempi-devel
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
@@ -23,6 +36,8 @@ BuildRequires:	taglib-devel
 BuildRequires:	libpoppler-qt4-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
+BuildRequires:	libksane0
+BuildRequires:	libxml2-devel
 Obsoletes:	bookcase
 Provides:	bookcase
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
