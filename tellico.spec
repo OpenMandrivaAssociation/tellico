@@ -13,14 +13,6 @@ Requires:	kdebase4-runtime
 Requires:	kdelibs4-core
 Requires:	kdemultimedia4
 Requires:	kdepimlibs4-core
-Requires:	libexempi3
-Requires:	libxslt1
-Requires:	libtaglib1
-Requires:	libpoppler-qt4-3
-Requires:	yaz
-Requires:	libqimageblitz4
-Requires:	libksane0
-Requires:	libxml2_2
 # QJSON not available yet
 BuildRequires:	libpoppler-qt4-devel
 Requires(post):	desktop-file-utils
@@ -36,7 +28,6 @@ BuildRequires:	taglib-devel
 BuildRequires:	libpoppler-qt4-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
-BuildRequires:	libksane0
 BuildRequires:	libxml2-devel
 Obsoletes:	bookcase
 Provides:	bookcase
