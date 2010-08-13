@@ -3,7 +3,7 @@
 Summary:	A collection manager
 Name:		tellico
 Version:	2.3
-Release:	%mkrel 3
+Release:	%mkrel 4
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -14,6 +14,7 @@ Requires:	kdelibs4-core
 Requires:	kdemultimedia4
 Requires:	kdepimlibs4-core
 Requires:	qjson
+BuildRequires:	qjson
 BuildRequires:	qjson-devel
 BuildRequires:	libpoppler-qt4-devel
 Requires(post):	desktop-file-utils
