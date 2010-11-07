@@ -2,8 +2,8 @@
 
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3
-Release:	%mkrel 5
+Version:	2.3.1
+Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
