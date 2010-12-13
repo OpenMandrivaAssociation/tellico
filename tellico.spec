@@ -2,15 +2,13 @@
 
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.1
-Release:	%mkrel 2
+Version:	2.3.2
+Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
 URL:		http://tellico-project.org/
 Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
-# Only needed for 2.3.1. Will be fixed upstream in next version
-Patch0:		fix-1195446-sorted-columns.patch
 Requires:	kdebase4-runtime
 Requires:	kdelibs4-core
 Requires:	kdemultimedia4
@@ -63,7 +61,6 @@ directly from different web services such as amazon.com.
 
 %prep
 %setup -q
-%patch0
 
 %build
 %cmake_kde4
