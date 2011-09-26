@@ -2,7 +2,7 @@
 
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.3
+Version:	2.3.4
 Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
