@@ -21,7 +21,6 @@ Requires(postun): desktop-file-utils
 BuildRequires:	kdepimlibs4-devel
 BuildRequires:	kdemultimedia4-devel
 BuildRequires:	kdelibs4-devel
-BuildRequires:	kdegraphics4-devel
 BuildRequires:	exempi-devel
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	imagemagick
