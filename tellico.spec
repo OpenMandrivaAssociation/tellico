@@ -2,8 +2,8 @@
 
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.4
-Release:	%mkrel 2
+Version:	2.3.5
+Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -31,7 +31,6 @@ BuildRequires:  qimageblitz-devel
 BuildRequires:	libxml2-devel
 Obsoletes:	bookcase
 Provides:	bookcase
-Patch0:		tellico-fix-booleans.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -61,7 +60,6 @@ directly from different web services such as amazon.com.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %cmake_kde4
