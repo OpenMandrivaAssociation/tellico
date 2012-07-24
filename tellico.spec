@@ -1,14 +1,12 @@
-%define iconname %{name}.png
-
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.5
+Version:	2.3.6
 Release:	%mkrel 1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
 URL:		http://tellico-project.org/
-Source:		http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
+Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
 Requires:	kdebase4-runtime
 Requires:	kdelibs4-core
 Requires:	kdemultimedia4
@@ -19,7 +17,13 @@ BuildRequires:	libpoppler-qt4-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	kdepimlibs4-devel
+%if %{mdvver} < 201200
 BuildRequires:	kdemultimedia4-devel
+%else
+BuildRequires:	libkcddb-devel
+BuildRequires:	libkcompactdisc-devel
+%endif
+BuildRequires:	pkgconfig(libksane)
 BuildRequires:	kdelibs4-devel
 BuildRequires:	exempi-devel
 BuildRequires:	libxslt-devel >= 1.0.19
@@ -31,7 +35,6 @@ BuildRequires:  qimageblitz-devel
 BuildRequires:	libxml2-devel
 Obsoletes:	bookcase
 Provides:	bookcase
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Tellico is a collection manager for KDE. It includes default collections for
@@ -66,11 +69,6 @@ directly from different web services such as amazon.com.
 %make
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std -C build
 
 %find_lang %{name} --with-html
-
-%clean 
-rm -rf %{buildroot}
