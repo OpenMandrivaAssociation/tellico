@@ -1,7 +1,7 @@
 Summary:	A collection manager
 Name:		tellico
 Version:	2.3.6
-Release:	%mkrel 1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -9,7 +9,9 @@ URL:		http://tellico-project.org/
 Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
 Requires:	kdebase4-runtime
 Requires:	kdelibs4-core
+%if %{mdvver} < 201200
 Requires:	kdemultimedia4
+%endif
 Requires:	kdepimlibs4-core
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
@@ -83,7 +85,7 @@ directly from different web services such as amazon.com.
 + Revision: 761852
 - Update tellico to upstream 2.3.5
 
-* Tue Oct 11 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 3:2.3.4-2
+* Tue Oct 11 2011 Nicolas LÃ©cureuil <nlecureuil@mandriva.com> 3:2.3.4-2
 + Revision: 704140
 - Remove kdegraphics4-devel to see the new header needed
 
@@ -141,7 +143,7 @@ directly from different web services such as amazon.com.
 + Revision: 467824
 - new version 2.1.1
 
-* Thu Nov 12 2009 Jérôme Quelin <jquelin@mandriva.org> 3:2.1-2mdv2010.1
+* Thu Nov 12 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 3:2.1-2mdv2010.1
 + Revision: 465472
 - rebuild
 
@@ -188,17 +190,17 @@ directly from different web services such as amazon.com.
 + Revision: 385318
 - Update tellico to SVN 980523
 
-* Fri May 29 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 1:1.9-0.974359.2mdv2010.0
+* Fri May 29 2009 Nicolas LÃ©cureuil <nlecureuil@mandriva.com> 1:1.9-0.974359.2mdv2010.0
 + Revision: 380930
 - increase release
 - Remove merged patches
 - New snapshot
 
-* Sat Mar 07 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 1:1.9-0.936109.4mdv2009.1
+* Sat Mar 07 2009 Nicolas LÃ©cureuil <nlecureuil@mandriva.com> 1:1.9-0.936109.4mdv2009.1
 + Revision: 351484
 - Fix deps
 
-* Sat Mar 07 2009 Nicolas Lécureuil <nlecureuil@mandriva.com> 1:1.9-0.936109.3mdv2009.1
+* Sat Mar 07 2009 Nicolas LÃ©cureuil <nlecureuil@mandriva.com> 1:1.9-0.936109.3mdv2009.1
 + Revision: 350987
 - Addd BuildRequire
 - Fix patch
@@ -269,7 +271,7 @@ directly from different web services such as amazon.com.
 + Revision: 91931
 - Update to 1.2.6
 
-  + Nicolas Lécureuil <neoclust@mandriva.org>
+  + Nicolas LÃ©cureuil <neoclust@mandriva.org>
     - New version 1.2.6
     - import tellico-1.2.3-1mdv2007.0
 
@@ -306,16 +308,16 @@ directly from different web services such as amazon.com.
 * Wed May 10 2006 Lenny Cartier <lenny@mandriva.com> 1.1.6-1mdk
 - 1.1.6
 
-* Fri Apr 21 2006 Nicolas L�cureuil <neoclust@mandriva.org> 1.1.5-1mdk
+* Fri Apr 21 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1.1.5-1mdk
 - New release 1.1.5
 
 * Wed Apr 05 2006 Lenny Cartier <lenny@mandriva.com> 1.1.4-1mdk
 - 1.1.4
 
-* Mon Mar 13 2006 Nicolas L�cureuil <neoclust@mandriva.org> 1.1.3-1mdk
+* Mon Mar 13 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1.1.3-1mdk
 - New release 1.1.3
 
-* Mon Mar 06 2006 Nicolas L�cureuil <neoclust@mandriva.org> 1.1.2-1mdk
+* Mon Mar 06 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1.1.2-1mdk
 - New release 1.1.2
 
 * Tue Feb 28 2006 Jerome quelin <jquelin@gmail.com> 1.1.1-1mdk
@@ -330,7 +332,7 @@ directly from different web services such as amazon.com.
 * Tue Oct 04 2005 Lenny Cartier <lenny@mandriva.com> 1.0.2-1mdk
 - 1.0.2
 
-* Mon Oct 03 2005 Nicolas L�cureuil <neoclust@mandriva.org> 0.13.8-2mdk
+* Mon Oct 03 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.13.8-2mdk
 - BuildRequires fix
 
 * Tue Jul 05 2005 Lenny Cartier <lenny@mandriva.com> 0.13.8-1mdk
