@@ -28,13 +28,13 @@ BuildRequires:	libkcompactdisc-devel
 BuildRequires:	pkgconfig(libksane)
 BuildRequires:	kdelibs4-devel
 BuildRequires:	exempi-devel
-BuildRequires:	libxslt-devel >= 1.0.19
+BuildRequires:	pkgconfig(libexslt) >= 1.0.19
 BuildRequires:	imagemagick
 BuildRequires:	taglib-devel
 BuildRequires:	libpoppler-qt4-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
-BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig(libxml-2.0)
 Obsoletes:	bookcase
 Provides:	bookcase
 
