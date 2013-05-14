@@ -36,6 +36,7 @@ BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	kde4-macros
+BuildRequires:	qt4-devel
 Obsoletes:	bookcase
 Provides:	bookcase
 
