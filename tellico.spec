@@ -1,7 +1,7 @@
 Summary:	A collection manager
 Name:		tellico
 Version:	2.3.6
-Release:	3
+Release:	4
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -35,6 +35,7 @@ BuildRequires:	libpoppler-qt4-devel
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	lde4-macros
 Obsoletes:	bookcase
 Provides:	bookcase
 
