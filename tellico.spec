@@ -15,7 +15,6 @@ Requires:	kdemultimedia4
 Requires:	kdepimlibs4-core
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
-BuildRequires:	pkgconfig(poppler-qt4)
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	kdepimlibs4-devel
@@ -31,7 +30,7 @@ BuildRequires:	exempi-devel
 BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	imagemagick
 BuildRequires:	taglib-devel
-BuildRequires:	libpoppler-qt4-devel
+BuildRequires:	pkgconfig(poppler-qt4)
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
