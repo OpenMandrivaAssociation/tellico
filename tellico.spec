@@ -1,7 +1,7 @@
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.8
-Release:	3
+Version:	2.3.10
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
@@ -75,4 +75,3 @@ directly from different web services such as amazon.com.
 %makeinstall_std -C build
 
 %find_lang %{name} --with-html
-
