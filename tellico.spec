@@ -9,16 +9,16 @@ URL:		http://tellico-project.org/
 Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.xz
 Requires:	kdebase5runtime
 Requires:	kdelibs5-core
-Requires:	lib64KF5Libkdepim
+Requires:	libKF5Libkdepim
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
-BuildRequires:	lib64KF5Libkdepim-devel
-BuildRequires:	lib64kcddb5-devel
+BuildRequires:	libKF5Libkdepim-devel
+BuildRequires:	libkcddb5-devel
 BuildRequires:	libkcompactdisc-devel
 BuildRequires:	pkgconfig(libksane)
-BuildRequires:	lib64KF5KDELibs4Support-devel
+BuildRequires:	libKF5KDELibs4Support-devel
 BuildRequires:	exempi-devel
 BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	imagemagick
@@ -29,17 +29,15 @@ BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	qt5-macros
 BuildRequires:	qt5-devel
-BuildRequires:	lib64qt5test-devel
-BuildRequires:	lib64KF5Html-devel
-BuildRequires:	lib64KF5JS-devel
+BuildRequires:	libqt5test-devel
+BuildRequires:	libKF5Html-devel
+BuildRequires:	libKF5JS-devel
 BuildRequires:	kjs
-BuildRequires:	lib64KF5FileMetaData-devel
-BuildRequires:	lib64KF5NewStuff-devel
-BuildRequires:	lib64KF5Sane-devel
-BuildRequires:	lib64poppler-qt5-devel
-BuildRequires:	lib64discid-devel
-#BuildRequires:
-#BuildRequires:
+BuildRequires:	libKF5FileMetaData-devel
+BuildRequires:	libKF5NewStuff-devel
+BuildRequires:	libKF5Sane-devel
+BuildRequires:	libpoppler-qt5-devel
+BuildRequires:	libdiscid-devel
 
 %description
 Tellico is a collection manager for KDE. It includes default collections for
