@@ -23,7 +23,7 @@ BuildRequires:	exempi-devel
 BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	imagemagick
 BuildRequires:	taglib-devel
-BuildRequires:	pkgconfig(poppler-qt4)
+BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
@@ -36,7 +36,6 @@ BuildRequires:	kjs
 BuildRequires:	libKF5FileMetaData-devel
 BuildRequires:	libKF5NewStuff-devel
 BuildRequires:	libKF5Sane-devel
-BuildRequires:	libpoppler-qt5-devel
 BuildRequires:	libdiscid-devel
 
 %description
