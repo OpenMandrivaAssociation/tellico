@@ -1,31 +1,24 @@
 Summary:	A collection manager
 Name:		tellico
-Version:	2.3.8
-Release:	3
+Version:	3.0.2
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
 URL:		http://tellico-project.org/
-Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.bz2
-Requires:	kdebase4-runtime
-Requires:	kdelibs4-core
-%if %{mdvver} < 201200
-Requires:	kdemultimedia4
-%endif
-Requires:	kdepimlibs4-core
+Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.xz
+Requires:	kdebase5runtime
+Requires:	kdelibs5-core
+Requires:	lib64KF5Libkdepim
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
-BuildRequires:	kdepimlibs4-devel
-%if %{mdvver} < 201200
-BuildRequires:	kdemultimedia4-devel
-%else
-BuildRequires:	libkcddb-devel
+BuildRequires:	lib64KF5Libkdepim-devel
+BuildRequires:	lib64kcddb5-devel
 BuildRequires:	libkcompactdisc-devel
-%endif
 BuildRequires:	pkgconfig(libksane)
-BuildRequires:	kdelibs4-devel
+BuildRequires:	lib64KF5KDELibs4Support-devel
 BuildRequires:	exempi-devel
 BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	imagemagick
@@ -34,10 +27,19 @@ BuildRequires:	pkgconfig(poppler-qt4)
 BuildRequires:	yaz-devel >= 3.0
 BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	kde4-macros
-BuildRequires:	qt4-devel
-Obsoletes:	bookcase
-Provides:	bookcase
+BuildRequires:	qt5-macros
+BuildRequires:	qt5-devel
+BuildRequires:	lib64qt5test-devel
+BuildRequires:	lib64KF5Html-devel
+BuildRequires:	lib64KF5JS-devel
+BuildRequires:	kjs
+BuildRequires:	lib64KF5FileMetaData-devel
+BuildRequires:	lib64KF5NewStuff-devel
+BuildRequires:	lib64KF5Sane-devel
+BuildRequires:	lib64poppler-qt5-devel
+BuildRequires:	lib64discid-devel
+#BuildRequires:
+#BuildRequires:
 
 %description
 Tellico is a collection manager for KDE. It includes default collections for
@@ -52,27 +54,40 @@ directly from different web services such as amazon.com.
 %files -f %{name}.lang
 %defattr (-,root,root)
 %doc AUTHORS ChangeLog
-%{_kde_bindir}/%{name}
-%{_kde_datadir}/applications/kde4/tellico.desktop
-%{_kde_datadir}/mimelnk/application/x-tellico.desktop
-%{_kde_datadir}/mime/packages/tellico.xml
-%{_kde_datadir}/apps/%{name}
-%{_kde_datadir}/apps/kconf_update/*
-%{_kde_datadir}/config.kcfg/tellico_config.kcfg
-%{_kde_datadir}/config/*
-%{_kde_iconsdir}/hicolor/*/*/*.png
+%{_kde5_bindir}/%{name}
+%{_kde5_sysconfdir}/xdg/*
+%{_kde5_datadir}/applications/org.kde.tellico.desktop
+%{_kde5_datadir}/mime/packages/tellico.xml
+%{_kde5_datadir}/config.kcfg/tellico_config.kcfg
+%{_kde5_iconsdir}/hicolor/*/*/*.png
+%{_kde5_datadir}/tellico/*.xsl
+%{_kde5_datadir}/tellico/*.png
+%{_kde5_datadir}/tellico/*.xml
+%{_kde5_datadir}/tellico/*.dtd
+%{_kde5_datadir}/tellico/*.tips
+%{_kde5_datadir}/tellico/*.cfg
+%{_kde5_datadir}/tellico/*.html
+%{_kde5_datadir}/tellico/*.js
+%{_kde5_datadir}/tellico/pics/*
+%{_kde5_datadir}/tellico/entry-templates/*
+%{_kde5_datadir}/tellico/data-sources/*
+%{_kde5_datadir}/tellico/report-templates/*
+%{_kde5_datadir}/kconf_update/*
+%{_kde5_xmlguidir}/tellico/tellicoui.rc
+%{_kde5_datadir}/metainfo/org.kde.tellico.appdata.xml
+
 
 #--------------------------------------------------------------------
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 %find_lang %{name} --with-html
 
