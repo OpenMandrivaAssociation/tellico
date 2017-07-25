@@ -34,7 +34,7 @@ BuildRequires:	libKF5Html-devel
 BuildRequires:	libKF5JS-devel
 BuildRequires:	kjs
 BuildRequires:	libKF5FileMetaData-devel
-BuildRequires:	libKF5NewStuff-devel
+#BuildRequires:	libKF5NewStuff-devel
 BuildRequires:	libKF5Sane-devel
 BuildRequires:	libdiscid-devel
 
