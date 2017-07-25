@@ -15,7 +15,7 @@ BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	libKF5Libkdepim-devel
-BuildRequires:	libkcddb5-devel
+#BuildRequires:	libkcddb5-devel
 BuildRequires:	libkcompactdisc-devel
 BuildRequires:	pkgconfig(libksane)
 BuildRequires:	libKF5KDELibs4Support-devel
