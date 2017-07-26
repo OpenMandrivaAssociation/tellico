@@ -15,7 +15,6 @@ BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRequires:	cmake(KF5Libkdepim)
-BuildRequires:	libKF5Cddb5
 BuildRequires:	libkcompactdisc-devel
 BuildRequires:	pkgconfig(libksane)
 BuildRequires:	cmake(KF5KDELibs4Support)
