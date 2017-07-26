@@ -9,7 +9,7 @@ URL:		http://tellico-project.org/
 Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.xz
 Requires:	kdebase5runtime
 Requires:	kdelibs5-core
-Requires:	libKF5Libkdepim
+Requires:	cmake(KF5Libkdepim)
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
@@ -29,7 +29,7 @@ BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	qt5-macros
 BuildRequires:	qt5-devel
-BuildRequires:	cmake(qt5test5)
+BuildRequires:	pkgconfig(qt5Test)
 BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5JS)
 BuildRequires:	kjs
