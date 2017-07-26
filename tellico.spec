@@ -18,7 +18,7 @@ BuildRequires:	cmake(KF5Libkdepim)
 BuildRequires:	cmake(KF5Cddb5)
 BuildRequires:	libkcompactdisc-devel
 BuildRequires:	pkgconfig(libksane)
-BuildRequires:	libKF5KDELibs4Support-devel
+BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	exempi-devel
 BuildRequires:	pkgconfig(libexslt)
 BuildRequires:	imagemagick
@@ -29,8 +29,8 @@ BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	qt5-macros
 BuildRequires:	qt5-devel
-#BuildRequires:	libqt5test-devel
-BuildRequires:	cmake(KF5Html)
+BuildRequires:	libqt5test-devel
+BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5JS)
 BuildRequires:	kjs
 BuildRequires:	cmake(KF5FileMetaData)
