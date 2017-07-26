@@ -14,8 +14,8 @@ BuildRequires:	qjson
 BuildRequires:	qjson-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
-BuildRequires:	libKF5Libkdepim-devel
-#BuildRequires:	libkcddb5-devel
+BuildRequires:	cmake(KF5Libkdepim)
+BuildRequires:	cmake(KF5Cddb5)
 BuildRequires:	libkcompactdisc-devel
 BuildRequires:	pkgconfig(libksane)
 BuildRequires:	libKF5KDELibs4Support-devel
@@ -30,12 +30,12 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	qt5-macros
 BuildRequires:	qt5-devel
 #BuildRequires:	libqt5test-devel
-BuildRequires:	libKF5Html-devel
-BuildRequires:	libKF5JS-devel
+BuildRequires:	cmake(KF5Html)
+BuildRequires:	cmake(KF5JS)
 BuildRequires:	kjs
-BuildRequires:	libKF5FileMetaData-devel
-#BuildRequires:	libKF5NewStuff-devel
-BuildRequires:	libKF5Sane-devel
+BuildRequires:	cmake(KF5FileMetaData)
+BuildRequires:	cmake(KF5NewStuff)
+BuildRequires:	cmake(KF5Sane)
 BuildRequires:	libdiscid-devel
 
 %description
