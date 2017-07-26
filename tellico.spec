@@ -29,7 +29,7 @@ BuildRequires:  qimageblitz-devel
 BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	qt5-macros
 BuildRequires:	qt5-devel
-BuildRequires:	cmake(qt5test)
+BuildRequires:	cmake(qt5test5)
 BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5JS)
 BuildRequires:	kjs
