@@ -7,8 +7,6 @@ License:	GPLv2+
 Group:		Databases
 URL:		http://tellico-project.org/
 Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.xz
-Requires:	kdebase5runtime
-Requires:	kdelibs5-core
 Requires:	cmake(KF5Libkdepim)
 BuildRequires:	qjson
 BuildRequires:	qjson-devel
