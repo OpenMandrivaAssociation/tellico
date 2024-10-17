@@ -5,7 +5,7 @@ Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Databases
-URL:		http://tellico-project.org/
+URL:		https://tellico-project.org/
 Source0:	http://www.tellico-project.org/files/%{name}-%{version}.tar.xz
 Requires:	kdebase5runtime
 Requires:	kdelibs5-core
