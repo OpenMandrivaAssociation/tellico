@@ -9,6 +9,7 @@ Url:		https://tellico-project.org/
 Source0:	https://tellico-project.org/download-tellico/%{name}-%{version}.tar.xz
 Patch0: tellico-4.2-fix-shebangs.patch
 BuildRequires:	cmake >= 3.16
+BuildRequires:	make
 BuildRequires:	extra-cmake-modules >= 5.19
 BuildRequires:	gettext
 BuildRequires:	imagemagick
