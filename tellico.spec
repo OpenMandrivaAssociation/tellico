@@ -1,13 +1,13 @@
 Summary:	A collection manager
 Name:		tellico
-Version:		4.1.4
+Version:		4.2
 Release:	1
 Epoch:	3
 License:	GPLv2+
 Group:	Databases
 Url:		https://tellico-project.org/
 Source0:	https://tellico-project.org/download-tellico/%{name}-%{version}.tar.xz
-Patch0: tellico-4.1.4-fix-shebangs.patch
+Patch0: tellico-4.2-fix-shebangs.patch
 BuildRequires:	cmake >= 3.16
 BuildRequires:	extra-cmake-modules >= 5.19
 BuildRequires:	gettext

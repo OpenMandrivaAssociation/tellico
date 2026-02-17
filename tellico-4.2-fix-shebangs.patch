@@ -1,0 +1,18 @@
+diff -rupN tellico-4.2.old/src/config/tellico-3-4-update.pl tellico-4.2/src/config/tellico-3-4-update.pl
+--- tellico-4.2.old/src/config/tellico-3-4-update.pl	2026-02-15 22:43:25.000000000 +0100
++++ tellico-4.2/src/config/tellico-3-4-update.pl	2026-02-17 15:07:27.084224228 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env perl
++#!/usr/bin/perl
+ 
+ my $group;
+ my $igdbgroup;
+diff -rupN tellico-4.2.old/src/fetch/scripts/dark_horse_comics.py tellico-4.2/src/fetch/scripts/dark_horse_comics.py
+--- tellico-4.2.old/src/fetch/scripts/dark_horse_comics.py	2026-02-15 22:43:25.000000000 +0100
++++ tellico-4.2/src/fetch/scripts/dark_horse_comics.py	2026-02-17 15:13:20.337641781 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/python
+ # -*- coding: utf-8 -*-
+ 
+ # ***************************************************************************
