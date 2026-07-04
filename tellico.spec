@@ -1,6 +1,6 @@
 Summary:	A collection manager
 Name:		tellico
-Version:		4.2
+Version:		4.2.1
 Release:	1
 Epoch:	3
 License:	GPLv2+
